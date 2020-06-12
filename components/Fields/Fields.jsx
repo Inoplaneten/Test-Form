@@ -4,7 +4,7 @@ import './Fields.scss';
 const Fields = props => {
     return (
         <div className="inputBox">
-            <label className={`labelForm ${props.requiered}`}>{props.nameLabel}</label>
+            {props.type !== 'file' &&  <label className={`labelForm ${props.requiered}`}>{props.nameLabel}</label>}
             {props.type === 'textarea' ? 
                 <textarea 
                     placeholder={props.placeholder} 
